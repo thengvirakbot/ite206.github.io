@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<head>
+<title>Dashboard Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="icon" type="image/x-icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+<div class="container text-center" style=" background-color: rgb(139, 139, 139); border-radius: 15px; padding-bottom: 10px">
+
+<!-- First row -->
+    <div class="row justify-content-start" style="background-color: rgb(255, 170, 42); height: 120px; border-radius: 15px 15px 0px 0px;"> 
+        <div class="col">
+           
+             <h1 id="profile"><img src="img/Myprofile.jpg" id="userpf" width="60px" height="60px"> UserAccount</img> </h1>
+
+        </div>
+        <div class="col">
+            <button class="btn btn-info" type="button" id="btbheader"><a href="datacenter.html" style="text-decoration: none; color: white;">Data Center</a></button>
+        </div>
+    </div>
+
+    <br>
+
+<!-- second row-->
+    <div class="row align-items-start">
+
+
+        <!--left column-->
+        
+
+        <div class="col-2" style="padding-right: 20px;">
+            <div class="row" >
+                <a href="dashboard.html">
+                <button class="btn btn-secondary" id="btbleft1" type="button"></i><i class="fa-solid fa-house-chimney"></i> &nbsp; Home</button>
+            </div>
+            </a>
+            <div class="row">
+                <a href="#">
+                <button class="btn btn-secondary" id="btbleft2" type="button"><i class="fa-solid fa-medal"></i>&nbsp; Score</button>
+            </a>
+            </div>
+        </div>
+       
+
+        
+
+        <!--Right column-->
+        <div class="col" style=" background-color: rgb(52, 47, 47); align-items: center; border-radius: 15px;padding-left:0px; padding-right:0px;padding-top:10px;padding-bottom:10px; margin-bottom:-5px;">  
+            <button type="button" id="btb1" class="btn btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Total Students <i class="fa-solid fa-user"></i> <h5 id="numtotal">100​ Person</h5></button>
+               
+
+
+            <button type="button" id="btb2" class="btn btn-warning" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Students Pass <i class="fa-solid fa-book-open"> </i><h5 id="num">100​ Person</h5></button>   
+                
+        
+            
+          
+            <!--inside right column left side -->   
+           
+            <div class="row"> 
+                 
+                    <div id="RightColLeftSide" class="col" style="border-radius: 15px 15px 10px 10px; margin-right: 5px;margin-top:5px">
+                        
+                        <button class="btn btn-danger" id="btb3" type="button">IT College <i class="fa-solid fa-laptop"></i>  <h5 id="num1">100​ Person</h5></button>
+                        <button class="btn btn-danger" id="btb4" type="button">Language College <i class="fa-solid fa-book"></i> <h5 id="num2">100​ Person</h></button>
+                        <button class="btn btn-danger" id="btb5" type="button">Social College <i class="fa-solid fa-people-arrows"></i> <h5 id="num3">100​ Person</h5></button>
+                
+                    </div>
+
+                    <!--inside right column right side -->   
+                    <div id="RightColRightSide" class="col" style="border-radius: 15px 15px 10px 10px; margin-left: 5px; margin-top:5px"> 
+                        
+                        <button class="btn btn-warning" id="btb6" type="button">IT College <i class="fa-solid fa-laptop"></i> <h5 id="num4">100​ Person</h5></button>
+                        <button class="btn btn-warning" id="btb7" type="button">Language College <i class="fa-solid fa-book"></i> <h5 id="num5">100​ Person</h5></button>
+                        <button class="btn btn-warning" id="btb8" type="button">Social College <i class="fa-solid fa-people-arrows"></i> <h5 id="num6">100​ Person</h5></button>
+            
+                    </div>
+                </div>
+
+                 
+
+        </div>
+
+
+
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script
+</body>
+
+</html>
