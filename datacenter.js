@@ -1,5 +1,14 @@
-// localStorage function
-function loadNamesFromLocalStorage() {
+if (!sessionStorage.getItem('userLoggedIn')) {
+    window.location.href = 'index.html'; 
+}
+
+document.getElementById('logoutBtn').addEventListener('click', function() {
+    sessionStorage.removeItem('userLoggedIn');
+    
+    window.location.href = 'index.html';
+});
+  
+  function loadNamesFromLocalStorage() {
   const storedData = localStorage.getItem('namesList');
   if (storedData) {
     const names = JSON.parse(storedData);
