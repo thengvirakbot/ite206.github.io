@@ -1,3 +1,13 @@
+  if (!sessionStorage.getItem('userLoggedIn')) {
+    window.location.href = 'index.html'; 
+  }
+
+  document.getElementById('logoutBtn').addEventListener('click', function() {
+    sessionStorage.removeItem('userLoggedIn');
+    
+    window.location.href = 'index.html';
+  });
+
 const data = {
     labels: ['Semester 1', 'Semester 2', 'Semester 3'],
     datasets: [{
