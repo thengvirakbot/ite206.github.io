@@ -72,6 +72,7 @@
     box-sizing: border-box;
     border-radius: none;
     margin-left: 250px;
+    position: relative;
   }
 
   header .data-center-btn {
@@ -83,7 +84,8 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    margin-right: 20px;
+    float: right;
+    margin-right: auto;
   }
 
   header .data-center-btn:hover {
@@ -129,7 +131,7 @@
     border: none;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
   }
 
@@ -157,14 +159,6 @@
     font-size: 1rem;
     color: #6c757d;
     border-radius: 0 0 15px 15px;
-  }
-
-  .footer {
-    background-color: #4a90e2;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    width: 100%;
   }
 
   .user-info {
