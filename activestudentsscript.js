@@ -1,3 +1,13 @@
+if (!sessionStorage.getItem('userLoggedIn')) {
+    window.location.href = 'index.html'; 
+}
+
+  document.getElementById('logoutBtn').addEventListener('click', function() {
+    sessionStorage.removeItem('userLoggedIn');
+    
+    window.location.href = 'index.html';
+  });
+
   const genderData = {
     labels: ['Male', 'Female', 'Prefer Not to Mention'],
     datasets: [{
