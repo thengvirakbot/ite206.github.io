@@ -1,4 +1,4 @@
-function validateLogin() {
+  function validateLogin() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
@@ -7,10 +7,19 @@ function validateLogin() {
 
     if (username === correctUsername && password === correctPassword) {
 
-        sessionStorage.setItem("loggedInUser", username);
+      sessionStorage.setItem("loggedInUser", username);
+      sessionStorage.setItem("userLoggedIn", "true");
+      
 
-        window.location.href = "dashboard.html";
+      window.location.href = "dashboard.html";
     } else {
-        alert("Invalid username or password. Please try again.");
+
+      alert("Invalid username or password. Please try again.");
     }
-}
+  }
+
+  document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    validateLogin();
+  });
