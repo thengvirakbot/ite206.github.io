@@ -11,41 +11,42 @@
 </head>
 <body>
 
-<div class="sidebar">
-  <div class="sidebar-user-profile p-3">
-    <div class="d-flex align-items-center">
-      <img src="profile-pic.png" alt="User Picture" class="profile-pic">
-      <span id="userName">UserAccount</span>
-    </div>
-  </div>
-
-  <a href="dashboard.html" class="menu-item">
-    <i class="bi bi-house-door"></i> Home
-  </a>
-  <a href="score.html" class="menu-item">
-    <i class="bi bi-award"></i> Score
-  </a>
-
-  <button id="logoutBtn" class="logout-btn">Logout</button>
-</div>
-
 <header>
     <div class="d-flex align-items-center">
         <img src="logo.png" alt="UC Logo" class="logo">
         <h1 class="m-0">UC Student Management System</h1>
-        <a href="datacenter.html" class="data-center-btn" style="text-decoration:none;"> Data Center</a>
     </div>
+    <div class="header-right d-flex align-items-center">
+        <input type="text" class="search-bar" placeholder="Search">
+        <a href="datacenter.html" class="data-center-btn" style="text-decoration:none;">
+            <i class="bi bi-plus-lg"></i> Data center
+        </a>
+
+        <img src="profile-pic.png" alt="Profile Picture" class="profile-pic">
+    </div>
+    <div class="header-line"></div>
 </header>
 
+  <div class="sidebar">
+    <a href="dashboard.html" class="menu-item">
+      <i class="bi bi-house-door"></i> Home
+    </a>
+    <a href="score.html" class="menu-item">
+      <i class="bi bi-award"></i> Score
+    </a>
+      <button id="logoutBtn" class="logout-btn">Log out</button>
+
+  </div>
+
 <div class="container my-4">
-    <h2 class="text-center text-primary mb-4 fw-bold">Active Students</h2>
+    <h2 class="text-center" style="color: #fff; font-weight: 700;" class="mb-4">Active students</h2>
     <div class="row">
         <div class="col-md-6">
-    <h3>Gender Distribution</h3>
+    <h3>Gender distribution</h3>
     <canvas id="genderDonutChart"></canvas>
 </div>
     <div class="col-md-6">
-      <h3>Student Status</h3>
+      <h3>Student status</h3>
       <canvas id="statusDonutChart"></canvas>
     </div>
   </div>
@@ -60,3 +61,4 @@
 
 </body>
 </html>
+
