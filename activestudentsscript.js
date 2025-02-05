@@ -8,7 +8,7 @@ document.getElementById('logoutBtn').addEventListener('click', function() {
 });
 
 const genderData = {
-    labels: ['Male', 'Female', 'Prefer Not to Mention'],
+    labels: ['Male', 'Female', 'Prefer not to mention'],
     datasets: [{
         data: [900, 500, 100],
         backgroundColor: ['#FF5733', '#FFC300', '#DAF7A6'], // Striking and vibrant colors
@@ -18,7 +18,7 @@ const genderData = {
 };
 
 const statusData = {
-    labels: ['Active Students', 'Dropouts', 'Graduated Students'],
+    labels: ['Active students', 'Dropouts', 'Graduated students'],
     datasets: [{
         data: [1500, 700, 8000],
         backgroundColor: ['#FF6347', '#FF4500', '#32CD32'], // High-contrast and vibrant colors
