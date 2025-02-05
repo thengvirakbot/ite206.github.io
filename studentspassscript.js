@@ -1,21 +1,21 @@
-  if (!sessionStorage.getItem('userLoggedIn')) {
+if (!sessionStorage.getItem('userLoggedIn')) {
     window.location.href = 'index.html'; 
-  }
+}
 
-  document.getElementById('logoutBtn').addEventListener('click', function() {
+document.getElementById('logoutBtn').addEventListener('click', function() {
     sessionStorage.removeItem('userLoggedIn');
-    
     window.location.href = 'index.html';
-  });
+});
 
 const data = {
     labels: ['Semester 1', 'Semester 2', 'Semester 3'],
     datasets: [{
-        label: 'Pass Percentage (%)',
+        label: 'Pass percentage (%)',
         data: [75, 79, 85],
-        backgroundColor: 'rgba(54, 162, 235, 0.5)',
-        borderColor: 'rgba(54, 162, 235, 1)',
-        borderWidth: 2,
+        backgroundColor: 'rgba(255, 216, 20, 0.5)',
+        borderColor: 'rgba(255, 216, 20, 0.7)', 
+        borderWidth: 3,  
+        labelColor: '#fff',  
     }]
 };
 
@@ -27,26 +27,49 @@ const config = {
         plugins: {
             legend: {
                 position: 'top',
+                labels: {
+                    font: {
+                        size: 12,   
+                        weight: 'normal',
+                        family: 'Arial',
+                    },
+                    color: '#fff',  
+                }
             },
             tooltip: {
+                backgroundColor: '#333', 
+                titleColor: '#fff',
+                bodyColor: '#fff',
                 callbacks: {
-                label: function(tooltipItem) {
-                    return tooltipItem.raw + '%';
+                    label: function(tooltipItem) {
+                        return tooltipItem.raw + '%'; 
+                    }
                 }
             }
-        }
-    },
-    
-    scales: {
-        x: {
-            beginAtZero: true,
         },
-        y: {
-            beginAtZero: true,
-            max: 100
-        }
+        scales: {
+            x: {
+                beginAtZero: true,
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.3)',  
+                },
+                ticks: {
+                    color: '#fff',
+                }
+            },
+            y: {
+                beginAtZero: true,
+                max: 100,
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.3)',  
+                },
+                ticks: {
+                    color: '#fff', 
+                }
+            }
+        },
+
     }
-}
 };
 
 const passPercentageChart = new Chart(

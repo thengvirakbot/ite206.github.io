@@ -1,76 +1,165 @@
-        body {
-            overflow-x: hidden;
-            overflow-y: hidden;
-            margin: 0;
-            padding: 0;
-            background-image: url("bg.png"); 
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+/* General Body Styles */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #000, #000); 
+  overflow: hidden;
+}
 
-        #login-container {
-            background-color: rgba(0, 0, 0, 0.7); 
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            width: 400px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
+/* Slideshow Container */
+.slideshow {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
 
-        #uni {
-            font-size: 50px;
-            color: rgb(255, 157, 0);
-            font-family: Arial, Helvetica, sans-serif;
-            text-shadow: 0px 5px 0px rgb(255, 0, 0);
-            margin-bottom: 20px;
-        }
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0; /* Start with all images hidden */
+  animation: fade 25s infinite; /* Increased total animation duration */
+  transition: opacity 2.5s ease-in-out; /* Smoother and longer transition */
+}
 
-        input[type="text"], input[type="password"] {
-            border-radius: 30px;
-            font-size: 20px;
-            margin: 10px 0;
-            padding: 15px;
-            width: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            box-sizing: border-box;
-        }
+.slideshow img:nth-child(1) {
+  animation-delay: 0s;
+}
 
-        #btb1 {
-            margin-top: 15px;
-            font-size: 20px;
-            background-color: yellow;
-            color: rgb(172, 24, 24);
-            border: none;
-            border-radius: 25px;
-            padding: 10px;
-            width: 50%;
-            cursor: pointer;
-            font-family: Impact, sans-serif;
-        }
+.slideshow img:nth-child(2) {
+  animation-delay: 5s;
+}
 
-        #btb1:hover {
-            background-color: rgb(205, 212, 151);
-        }
+.slideshow img:nth-child(3) {
+  animation-delay: 10s;
+}
 
-        @media only screen and (max-width: 600px) {
-            #login-container {
-                width: 80%;
-                padding: 30px;
-            }
-            #uni {
-                font-size: 30px;
-            }
-            input[type="text"], input[type="password"] {
-                font-size: 16px;
-                padding: 12px;
-            }
-            #btb1 {
-                font-size: 18px;
-                padding: 12px;
-            }
-        }
+.slideshow img:nth-child(4) {
+  animation-delay: 15s;
+}
+
+.slideshow img:nth-child(5) {
+  animation-delay: 20s;
+}
+
+@keyframes fade {
+  0% { opacity: 0; } /* Start hidden */
+  5% { opacity: 1; } /* Fade in quickly */
+  20% { opacity: 1; } /* Stay fully visible */
+  25% { opacity: 0; } /* Fade out slowly */
+  100% { opacity: 0; } /* Stay hidden until the next cycle */
+}
+
+/* Login Container */
+.login-container {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+/* Form Container */
+.form-container {
+  background: rgba(0, 0, 0, 0.7); 
+  border-radius: 2px;
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); /* Enhanced shadow for depth */
+  z-index: 1;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+}
+
+.form-container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.form-container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff; 
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px 40px 12px 12px; /* Added padding for icons */
+  margin-bottom: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0s ease;
+}
+
+.form-container input:focus {
+  border-color: #fff; /* Highlight input on focus */
+}
+
+.form-container input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.form-container button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #ffd814; 
+  color: #000;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0s ease;
+}
+
+.form-container button:hover {
+  background: #e2c11a; 
+}
+
+.form-container p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255);
+}
+
+.form-container a {
+  color: #ffd814;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0s ease;
+}
+
+.form-container a:hover {
+  color: #fff;
+  text-decoration: underline;
+}

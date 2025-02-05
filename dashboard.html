@@ -12,95 +12,98 @@
 
 <body>
 
-<div class="sidebar">
-  <div class="sidebar-user-profile p-3">
-    <div class="d-flex align-items-center">
-      <img src="profile-pic.png" alt="User Picture" class="profile-pic">
-      <span id="userName">UserAccount</span>
-    </div>
-  </div>
-
-  <a href="dashboard.html" class="menu-item">
-    <i class="bi bi-house-door"></i> Home
-  </a>
-  <a href="score.html" class="menu-item">
-    <i class="bi bi-award"></i> Score
-  </a>
-
-  <button id="logoutBtn" class="logout-btn">Logout</button>
-</div>
-
 <header>
     <div class="d-flex align-items-center">
         <img src="logo.png" alt="UC Logo" class="logo">
         <h1 class="m-0">UC Student Management System</h1>
-        <a href="datacenter.html" class="data-center-btn" style="text-decoration:none;"> Data Center</a>
     </div>
+    <div class="header-right d-flex align-items-center">
+        <input type="text" class="search-bar" placeholder="Search">
+        <a href="datacenter.html" class="data-center-btn" style="text-decoration:none;">
+            <i class="bi bi-plus-lg"></i> Data center
+        </a>
+
+        <img src="profile-pic.png" alt="Profile Picture" class="profile-pic">
+    </div>
+    <div class="header-line"></div>
 </header>
+
+
+
+  <div class="sidebar">
+    <a href="dashboard.html" class="menu-item">
+      <i class="bi bi-house-door"></i> Home
+    </a>
+    <a href="score.html" class="menu-item">
+      <i class="bi bi-award"></i> Score
+    </a>
+      <button id="logoutBtn" class="logout-btn">Log out</button>
+
+  </div>
 
 <div class="content" style="margin-left: 250px; padding: 30px; font-family: 'Poppins', sans-serif;">
     <div class="row g-4">
         <a href="students.html" class="col-md-6" style="text-decoration: none;">
             <div class="card shadow-lg" style="border-radius: 20px; overflow: hidden;">
                 <div class="card-header text-white" style="background: linear-gradient(135deg, #306ac0, #5cd1b1); font-size: 1.4rem; padding: 20px; font-weight: bold;">
-                    <i class="bi bi-person-lines-fill"></i> Total Students
+                    <i class="bi bi-person-lines-fill"></i> Total students
                 </div>
                 <div class="card-body text-center" style="background: rgba(47, 122, 197, 0.1);">
                     <h3 style="font-size: 3rem; color: #245782; font-weight: bold; animation: fadeIn 2s;">
                         <i class="bi bi-person-circle"></i> 10,200
                     </h3>
                 </div>
-                <div class="card-footer text-secondary" style="background: linear-gradient(135deg, #306ac04c, #5cd1b217); padding: 15px; font-size: 1rem; font-style: italic;">Updated Today</div>
+                <div class="card-footer text-secondary" style="background: linear-gradient(135deg, #306ac04c, #5cd1b217); padding: 15px; font-size: 1rem; font-style: italic;">Updated today</div>
             </div>
         </a>
   
         <a href="studentspass.html" class="col-md-6" style="text-decoration: none;">
             <div class="card shadow-lg" style="border-radius: 20px; overflow: hidden;">
                 <div class="card-header text-white" style="background: linear-gradient(135deg, #f8a07c, #ff67a0); font-size: 1.4rem; padding: 20px; font-weight: bold;">
-                    <i class="bi bi-bar-chart-line-fill"></i> Students Pass
+                    <i class="bi bi-bar-chart-line-fill"></i> Students pass
                 </div>
                 <div class="card-body text-center" style="background: #f89f7c1a;">
                     <h3 style="font-size: 3rem; color: #e07d45; font-weight: bold; animation: fadeIn 2s;">
                         <i class="bi bi-check-circle"></i> 85%
                     </h3>
                 </div>
-                <div class="card-footer text-secondary" style="background: linear-gradient(135deg, #ff9b4456, #fc607517); padding: 15px; font-size: 1rem; font-style: italic;">Compared to Last Semester</div>
+                <div class="card-footer text-secondary" style="background: linear-gradient(135deg, #ff9b4456, #fc607517); padding: 15px; font-size: 1rem; font-style: italic;">Compared to last semester</div>
             </div>
         </a>
   
         <a href="allcolleges.html" class="col-md-6" style="text-decoration: none;">
             <div class="card shadow-lg" style="border-radius: 20px; overflow: hidden;">
                 <div class="card-header text-white" style="background: linear-gradient(135deg, #db1c48, #f5cabf); font-size: 1.4rem; padding: 20px; font-weight: bold;">
-                    <i class="bi bi-bookmark-check-fill"></i> All Colleges
+                    <i class="bi bi-bookmark-check-fill"></i> All colleges
                 </div>
                 <div class="card-body text-center" style="background: rgba(219, 28, 73, 0.053);">
                     <h3 style="font-size: 3rem; color: #b02a4a; font-weight: bold; animation: fadeIn 2s;">
                         <i class="bi bi-buildings"></i> 6
                     </h3>
                 </div>
-                <div class="card-footer text-secondary" style="background: linear-gradient(135deg, #f884798a, #f8847923); padding: 15px; font-size: 1rem; font-style: italic;">Updated 2 Weeks Ago</div>
+                <div class="card-footer text-secondary" style="background: linear-gradient(135deg, #f884798a, #f8847923); padding: 15px; font-size: 1rem; font-style: italic;">Updated 2 weeks ago</div>
             </div>
         </a>
   
         <a href="activestudents.html" class="col-md-6" style="text-decoration: none;">
             <div class="card shadow-lg" style="border-radius: 20px; overflow: hidden;">
                 <div class="card-header text-white" style="background: linear-gradient(135deg, #8f0595, #510082); font-size: 1.4rem; padding: 20px; font-weight: bold;">
-                    <i class="bi bi-book"></i> Active Students
+                    <i class="bi bi-book"></i> Active students
                 </div>
                 <div class="card-body text-center" style="background: #bcafcf1c;">
                     <h3 style="font-size: 3rem; color: #3d0c6f; font-weight: bold; animation: fadeIn 2s;">
                         <i class="bi bi-person-plus-fill"></i> 1,500
                     </h3>
                 </div>
-                <div class="card-footer text-secondary" style="background: linear-gradient(135deg, #5000822b, #90059511); padding: 15px; font-size: 1rem; font-style: italic;">Updated Today</div>
+                <div class="card-footer text-secondary" style="background: linear-gradient(135deg, #5000822b, #90059511); padding: 15px; font-size: 1rem; font-style: italic;">Updated today</div>
             </div>
         </a>
     </div>
   </div>
-  
-<footer>
+
+  <footer>
     <p>&copy; 2025 UC Student Management System</p>
-</footer>
+  </footer>
 
 <script src="dashboardscript.js"></script>
 

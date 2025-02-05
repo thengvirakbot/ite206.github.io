@@ -2,76 +2,97 @@ if (!sessionStorage.getItem('userLoggedIn')) {
     window.location.href = 'index.html'; 
 }
 
-  document.getElementById('logoutBtn').addEventListener('click', function() {
+document.getElementById('logoutBtn').addEventListener('click', function() {
     sessionStorage.removeItem('userLoggedIn');
-    
     window.location.href = 'index.html';
-  });
+});
 
-  const genderData = {
+const genderData = {
     labels: ['Male', 'Female', 'Prefer Not to Mention'],
     datasets: [{
-      data: [900, 500, 100],
-      backgroundColor: ['#4e73df', '#1cc88a', '#f6c23e'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#e5a700'],
-      hoverBorderColor: 'rgba(234, 236, 244, 1)',
+        data: [900, 500, 100],
+        backgroundColor: ['#FF5733', '#FFC300', '#DAF7A6'], // Striking and vibrant colors
+        hoverBackgroundColor: ['#C70039', '#FF6F00', '#82E0AA'], // Bold hover colors
+        hoverBorderColor: 'rgba(234, 236, 244, 1)', // Light border color
     }],
-  };
+};
 
-  const statusData = {
+const statusData = {
     labels: ['Active Students', 'Dropouts', 'Graduated Students'],
     datasets: [{
-      data: [1500, 700, 8000],
-      backgroundColor: ['#36b9cc', '#f86c6b', '#1cc88a'],
-      hoverBackgroundColor: ['#2a8fa7', '#e94c46', '#17a673'],
-      hoverBorderColor: 'rgba(234, 236, 244, 1)',
+        data: [1500, 700, 8000],
+        backgroundColor: ['#FF6347', '#FF4500', '#32CD32'], // High-contrast and vibrant colors
+        hoverBackgroundColor: ['#FF5733', '#E03C31', '#228B22'], // Bold hover colors
+        hoverBorderColor: 'rgba(234, 236, 244, 1)', // Light border color
     }],
-  };
+};
 
-  const genderConfig = {
+const genderConfig = {
     type: 'doughnut',
     data: genderData,
     options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'top',
-        },
-        tooltip: {
-          callbacks: {
-            label: function(tooltipItem) {
-              return tooltipItem.label + ': ' + tooltipItem.raw;
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    font: {
+                        size: 12,
+                        weight: 'normal',
+                        family: 'Arial',
+                    },
+                    color: '#FFFFFF',
+                }
+            },
+            tooltip: {
+                backgroundColor: '#333', 
+                titleColor: '#fff', 
+                bodyColor: '#fff',
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw;
+                    }
+                }
             }
-          }
         }
-      }
     },
-  };
+};
 
-  const statusConfig = {
+const statusConfig = {
     type: 'doughnut',
     data: statusData,
     options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'top',
-        },
-        tooltip: {
-          callbacks: {
-            label: function(tooltipItem) {
-              return tooltipItem.label + ': ' + tooltipItem.raw;
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+                labels: {
+                    font: {
+                        size: 12,
+                        weight: 'normal',
+                        family: 'Arial',
+                    },
+                    color: '#FFFFFF', // White text for better readability
+                }
+            },
+            tooltip: {
+                backgroundColor: '#333', // Dark background for tooltips
+                titleColor: '#fff', // White title color
+                bodyColor: '#fff', // White body color for tooltips
+                callbacks: {
+                    label: function(tooltipItem) {
+                        return tooltipItem.label + ': ' + tooltipItem.raw;
+                    }
+                }
             }
-          }
         }
-      }
     },
-  };
+};
 
-  window.onload = function() {
+window.onload = function() {
     const genderCtx = document.getElementById('genderDonutChart').getContext('2d');
     new Chart(genderCtx, genderConfig);
 
     const statusCtx = document.getElementById('statusDonutChart').getContext('2d');
     new Chart(statusCtx, statusConfig);
-  };
+};
