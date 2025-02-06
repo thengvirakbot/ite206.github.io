@@ -8,7 +8,7 @@ document.getElementById('logoutBtn').addEventListener('click', function() {
 });
 
 const data = {
-    labels: ['Male', 'Female', 'Prefer not to respond'],
+    labels: ['Male', 'Female', 'Prefer not to mention'],
     datasets: [{
         data: [5000, 4500, 700], 
         backgroundColor: ['#FF4C4C', '#FFD700', '#8A2BE2'], 
