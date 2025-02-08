@@ -112,16 +112,33 @@ header h1 {
     padding: 8px 15px;
     font-size: 1rem;
     border-radius: 50px;
-    border: 1px solid #D9D9D6;
+    border: 3px solid #333d42;
+    outline: none;
+    outline-color: #333d42;
     margin-right: 5px;
     width: 250px;
-    transition: border-color 0s;
+    transition: border-color 0s, background-color 0s, color 0s; 
+    background-color: #333d42;
+    color: #fff; 
+}
+
+.search-bar::placeholder {
+    color: #8bA2ad;
 }
 
 .search-bar:focus {
-    border-color: #f7b900;
-    outline: solid;
-    outline-color: #f7b900;
+    border-color: #ffd814;
+    color: #fff; 
+    background-color: #181c1f; 
+}
+
+.search-bar:hover {
+    background-color: #424f55;
+    border-color: #424f55;
+}
+
+.search-bar:focus:hover {
+    border-color: #ffd814;
 }
 
 header .data-center-btn {
