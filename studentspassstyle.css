@@ -120,17 +120,32 @@ header h1 {
     padding: 8px 15px;
     font-size: 1rem;
     border-radius: 50px;
-    border: 3px solid #333D42;
+    border: 3px solid #333d42;
     outline: none;
-    outline-color: #333D42;
+    outline-color: #333d42;
     margin-right: 5px;
     width: 250px;
-    transition: border-color 0s;
-    background-color: #333D42;
-    color: #fff; /* Text color for contrast */
+    transition: border-color 0s, background-color 0s, color 0s; 
+    background-color: #333d42;
+    color: #fff; 
+}
+
+.search-bar::placeholder {
+    color: #8bA2ad;
 }
 
 .search-bar:focus {
+    border-color: #ffd814;
+    color: #fff; 
+    background-color: #181c1f; 
+}
+
+.search-bar:hover {
+    background-color: #424f55;
+    border-color: #424f55;
+}
+
+.search-bar:focus:hover {
     border-color: #ffd814;
 }
 
