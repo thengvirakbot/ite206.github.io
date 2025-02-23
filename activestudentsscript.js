@@ -2,9 +2,23 @@ if (!sessionStorage.getItem('userLoggedIn')) {
     window.location.href = 'index.html'; 
 }
 
-document.getElementById('logoutBtn').addEventListener('click', function() {
-    sessionStorage.removeItem('userLoggedIn');
-    window.location.href = 'index.html';
+document.addEventListener("DOMContentLoaded", function () {
+    const profilePic = document.getElementById("profilePic");
+    const logoutDropdown = document.getElementById("logoutDropdown");
+
+    profilePic.addEventListener("click", function () {
+        logoutDropdown.style.display = logoutDropdown.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!profilePic.contains(event.target) && !logoutDropdown.contains(event.target)) {
+            logoutDropdown.style.display = "none";
+        }
+    });
+
+    document.getElementById("logoutBtn").addEventListener("click", function () {
+        window.location.href = "index.html";
+    });
 });
 
 const genderData = {
@@ -18,7 +32,7 @@ const genderData = {
 };
 
 const statusData = {
-    labels: ['Active students', 'Dropouts', 'Graduated students'],
+    labels: ['Active Students', 'Dropouts', 'Graduated students'],
     datasets: [{
         data: [1500, 700, 8000],
         backgroundColor: ['#FF6347', '#FF4500', '#32CD32'], // High-contrast and vibrant colors

@@ -54,23 +54,6 @@ body {
     font-size: 1.3rem;
 }
 
-.logout-btn {
-  width: 100%;
-  padding: 10px;
-  background-color: #ffd814; 
-  color: black;
-  border: none;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  margin-top: auto;
-}
-
-.logout-btn:hover {
-  background-color: #e2c11a; 
-}
-
 header {
     background-color: #000;
     color: #fff;
@@ -107,12 +90,12 @@ header h1 {
 
 .header-line {
     height: 0.2px;
-    background-color: #70797d; /* Change color as needed */
-    position: fixed; /* Make the line fixed at the top */
-    top: 73px; /* Adjust this based on your header's height */
+    background-color: #70797d;
+    position: fixed; 
+    top: 78px; 
     left: 0;
-    width: 100%; /* Ensure the line spans the full width */
-    z-index: 998; /* Keep the line below the header */
+    width: 100%; 
+    z-index: 998; 
 }
 
 .search-bar {
@@ -130,11 +113,11 @@ header h1 {
 }
 
 .search-bar::placeholder {
-    color: #8bA2ad;
+    color: #A9A9A9;
 }
 
 .search-bar:focus {
-    border-color: #ffd814;
+    border-color: #fff;
     color: #fff; 
     background-color: #181c1f; 
 }
@@ -145,25 +128,29 @@ header h1 {
 }
 
 .search-bar:focus:hover {
-    border-color: #ffd814;
+    border-color: #fff;
 }
 
 header .data-center-btn {
     background-color: #000;
-    color: white;
+    color: #fff;
+    gap: 0.5rem;
     font-weight: bold;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 15px;
     font-size: 1rem;
     border-radius: 50px;
     cursor: pointer;
-    margin-left: 5px;
-    transition: background-color 0s;
+    margin-left: 10px;
+    transition: background-color 0s ease-in-out, color 0s ease-in-out;
 }
 
 header .data-center-btn:hover {
-    background-color: #ffd814;
-    color: #000;
+    background-color: #333d42;
+}
+
+header .data-center-btn:active {
+    background: #424f55;
 }
 
 @media (max-width: 768px) {
@@ -195,7 +182,7 @@ header .data-center-btn:hover {
       box-sizing: border-box;
     }
 
-    .btn-custom {
+.btn-custom {
     background-color: #ffd814;
     color: black;
     font-weight: bold;
@@ -208,8 +195,12 @@ header .data-center-btn:hover {
     transition: background-color 0s;
 }
 
-    .btn-custom:hover {
+.btn-custom:hover {
     background-color: #e2c11a;
+}
+
+.btn-custom:active {
+    background-color: #c9a817;
 }
 
     .logo {
@@ -268,16 +259,96 @@ header .data-center-btn:hover {
     gap: 10px;
 }
 
+.profile-container {
+    position: relative;
+    display: inline-block;
+}
+
 .profile-pic {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
-    transition: outline 0s ease; 
+    cursor: pointer;
+    transition: outline 0s ease, transform 0s ease;
 }
 
 .profile-pic:hover {
-    outline: 4px solid #ffd814; 
+    outline: 5px solid #333d42; 
+}
+
+.profile-pic:active {
+    outline: 5px solid #424f55; 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #1f2428;
+    border-radius: 8px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+    text-align: left;
+    z-index: 1000;
+    top: 50px; 
+    padding: 5px 0;
+}
+
+.profile-info {
+    padding: 12px 15px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.profile-pic-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.dropdown-menu button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: transparent;
+    color: lightgray;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0s ease, color 0s ease;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.dropdown-menu button:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.profile-container:hover .dropdown-menu {
+    display: none;
+}
+
+.divider {
+    width: 100%;
+    height: 0.1px; 
+    background-color: #70797d; 
+    margin: 8px 0; 
 }
 
   .card {
