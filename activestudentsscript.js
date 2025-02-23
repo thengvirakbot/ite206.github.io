@@ -32,7 +32,7 @@ const genderData = {
 };
 
 const statusData = {
-    labels: ['Active Students', 'Dropouts', 'Graduated students'],
+    labels: ['Active students', 'Dropouts', 'Graduated students'],
     datasets: [{
         data: [1500, 700, 8000],
         backgroundColor: ['#FF6347', '#FF4500', '#32CD32'], // High-contrast and vibrant colors
